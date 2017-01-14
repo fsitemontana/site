@@ -1,6 +1,6 @@
 script:
 - chmod +x bin/build.sh
-- ./build.sh
+- ./bin/build.sh
 sudo: required
 language: node_js
 node_js:
