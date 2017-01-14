@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a
+             class="navbar-brand"
+             href="/">
+                <img
+                 src="/img/logo.svg"
+                 width="175"
+                 alt="Enhancv Logo">
+            </a>
+
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li {{#if isHome }} class="active" {{/if}}>
+                    <a href="/">НАЧАЛО</a>
+                </li>
+                <li {{#if isProducts }} class="active" {{/if}}>
+                    <a href="/products">ПРОДУКТИ</a>
+                </li>
+                <li {{#if isServices }} class="active" {{/if}}>
+                    <a href="/services.html">УСЛУГИ</a>
+                </li>
+                <li {{#if isRegulations }} class="active" {{/if}}>
+                    <a href="/regulations.html">НОРМ.УРЕДБИ</a>
+                </li>
+                <li {{#if isContacts }} class="active" {{/if}}>
+                    <a href="/contacts.html">КОНТАКТИ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

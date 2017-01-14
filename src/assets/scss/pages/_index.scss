@@ -1,0 +1,64 @@
+.home-header {
+    background-size: cover;
+    background-position: center;
+    min-height: 370px;
+    height: 450px;
+    height: calc(100vh - 302px);
+    background: linear-gradient(180deg, rgba(32, 30, 35, 0.35) 0, rgba(32, 30, 35, 0.87) 100%), url(/img/header-background.png);
+
+    img {
+        max-width: 360px;
+        width: 100%;
+    }
+
+    .vertical-center {
+        height:100%;
+        width:100%;
+
+        text-align: center;
+    }
+
+    .vertical-center:before {
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    .vertical-center > .container {
+        max-width: 100%;
+
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.homepage-info-bar {
+    background: $red-color;
+    color: #fff;
+
+    h2 {
+        margin: 68px 0;
+    }
+}
+
+.homepage-about-us, .homepage-activity {
+    padding-top: 150px;
+
+    h2 {
+        color: $red-color;
+        margin-bottom: 20px;
+    }
+}
+
+.homepage-activity {
+    padding-bottom: 150px;
+    background-color: $grey-color;
+
+    img {
+        border-radius: 7px;
+        max-width: 350px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

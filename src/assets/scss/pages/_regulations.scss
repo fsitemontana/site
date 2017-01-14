@@ -1,0 +1,44 @@
+.regulations {
+    min-height: 500px;
+    background: #f7f7f7;
+    color: #000;
+
+    i {
+        margin-right: 30px;
+    }
+
+    .links-container {
+        background: #fff;
+        border: 1px solid #d2d2d2;
+        margin: 50px 0;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    .links-item {
+        display: block;
+        width: 100%;
+        padding: 30px 30px;
+
+        &:hover {
+            background: #eb1d31;
+            color: #fff;
+        }
+    }
+
+    .links-separator {
+        height: 1px;
+        margin: 0px 30px;
+        background: #b8b8b8;
+    }
+
+    @media only screen and (min-width : 768px) {
+        .links-item {
+            padding: 30px 80px;
+        }
+
+        .links-separator {
+            margin: 0px 30px;
+        }
+    }
+}

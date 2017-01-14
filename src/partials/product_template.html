@@ -1,0 +1,75 @@
+<div class="products-menu">
+    <div class="container">
+        <div class="row">
+            <a href="/products/" class="col-sm-2-4 text-center {{#if isExtinguishers }} active{{/if}}">
+                <div>
+                    <span>ПОЖАРОГАСИТЕЛИ</span>
+                </div>
+            </a>
+            <a href="/products/equipment.html" class="col-sm-2-4 text-center {{#if isEquipment }} active{{/if}}">
+                <div>
+                    <span>ПРОТИВОПОЖАРНО ОБОРУДВАНЕ</span>
+                </div>
+            </a>
+            <a href="/products/doors.html" class="col-sm-2-4 text-center {{#if isDoors }} active{{/if}}">
+                <div>
+                    <span>ПРОТИВОПОЖАРНИ ВРАТИ</span>
+                </div>
+            </a>
+            <a href="/products/lightings.html" class="col-sm-2-4 text-center {{#if isLightings }} active{{/if}}">
+                <div>
+                    <span>ЕВАКУАЦИОННО ОСВЕТЛЕНИЕ</span>
+                </div>
+            </a>
+            <a href="/products/signs.html" class="col-sm-2-4 text-center {{#if isSigns }} active{{/if}}">
+                <div>
+                    <span>УКАЗАТЕЛНИ ЗНАЦИ</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="products">
+    <div class="container">
+        {{#each data as |section key|}}
+            <div class="section-heading">{{key}}</div>
+            <div class="row" data-key="{{translate key}}">
+                {{#each section.items as |item item_key|}}
+                <div class="product-item" data-item-key="{{item_key}}">
+                    <a href="#{{translate key}}:{{item_key}}" class="item col-sm-3">
+                        <div class="item-image text-center" style="background-image: url('{{item.image}}')" data-img-url="{{item.image}}">
+                        </div>
+                        <div class="item-title">
+                            {{item.title}}
+                        </div>
+                        <div class="item-description">
+                            {{item.subtitle}}
+                        </div>
+                    </a>
+                    <div class="full-description hidden">
+                        {{{item.description}}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade product-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+            <div class="image-holder text-center">
+                <img class="product-modal-image" />
+            </div>
+
+            <div class="text-holder">
+                <h3 class="product-modal-title"></h3>
+                <p class="product-modal-description"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>var isProducts = true;</script>

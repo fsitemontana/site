@@ -1,0 +1,40 @@
+.services-uslugi {
+    $color: rgba(146,0,14,0.85);
+
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(180deg,$color 0,$color 100%), url('/img/header-background.png');
+    color: #fff;
+
+    padding: 50px 0px;
+}
+
+.services-gray-bg {
+    $color: rgba(32, 30, 35, 0.85);
+    background: linear-gradient(180deg,$color 0,$color 100%), url('/img/header-background.png');
+}
+
+.services-engineering {
+    background: #f7f7f7;
+    padding: 50px 0px;
+
+    .heading {
+        border: 1px solid #313131;
+        color: #313131;
+    }
+}
+
+.heading {
+    font-size: 15px;
+    font-size: 15.51px;
+    border: 1px solid #fff;
+    padding: 7px 15px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.services-list {
+    li {
+        margin-bottom: 10px;
+    }
+}

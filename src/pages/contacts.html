@@ -1,0 +1,58 @@
+---
+isContacts: true
+title: "Контакти"
+---
+
+<div class="contacts-header">
+
+    <div class="container contacts">
+        <div class="row first-row">
+          <div class="contact-item col-md-3 col-md-offset-3">
+            <i class="fa fa-fax" aria-hidden="true"></i> +359 96 310 746
+          </div>
+          <div class="contact-item col-md-3 address">
+            <div style="display: inline-block; overflow: hidden;">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                    Гр. Монтана, <br />ул. „Янтра” № 29
+                </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="contact-item col-md-3 col-md-offset-3">
+            <i class="fa fa-phone" aria-hidden="true"></i> +359 888 930 840
+          </div>
+          <div class="contact-item col-md-3">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> inkomm@abv.bg
+          </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  function initMap() {
+    var uluru = {
+        lat: 43.414745,
+        lng: 23.228375
+    };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDonjoSNxECyhTr8L7xtbqMCefAkc7W_dM&callback=initMap"></script>
