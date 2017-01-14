@@ -1,8 +1,10 @@
+export NODE_ENV="production"
+
 git clone https://fsitemontana:$PSW@github.com/fsitemontana/fsitemontana.github.io.git cdn
 
 npm install -g yarn
 yarn
-gulp build
+NODE_ENV="production" gulp build
 
 cd cdn
 

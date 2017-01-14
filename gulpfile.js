@@ -13,15 +13,6 @@ const isProd = process.env.NODE_ENV === 'production';
 gulp.task('assemble', gulp.series(clean, pages, images, fonts, sass, icons, javascript));
 gulp.task('build', gulp.series('assemble', revisionFiles));
 gulp.task('default', gulp.series('assemble', server, watch));
-gulp.task('fontastic', function () {
-    return gulp.src('package.json')
-        .pipe($.fontastic({
-            key: process.env.FONTASTIC_KEY,
-            font_dir: 'src/asserts/icons/',
-            // style_path: 'fonts/',
-            scss: true,
-        }));
-});
 
 // Delete the "dist" folder
 // This happens every time a build starts
