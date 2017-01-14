@@ -1,8 +1,6 @@
-deploy:
-  provider: script
-  script: bin/build.sh
-  on:
-    branch: master
+script:
+- chmod +x bin/build.sh
+- ./build.sh
 sudo: required
 language: node_js
 node_js:
