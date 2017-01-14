@@ -65,7 +65,7 @@ function sass () {
 function javascript () {
     return gulp.src([
             'node_modules/jquery/dist/jquery.js',
-            'node_modules/bootstrap-sass/assets/javascripts/bootstrap/{transition,tooltip,popover,button,modal,collapse}.js',
+            'node_modules/bootstrap-sass/assets/javascripts/bootstrap/{modal,collapse}.js',
             'src/assets/js/**/*',
         ])
         .pipe($.if(!isProd, $.sourcemaps.init()))
