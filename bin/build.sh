@@ -5,6 +5,10 @@ yarn
 gulp build
 
 cd cdn
+
+git config --global user.email "inkommsite@abv.bg"
+git config --global user.name "Inkomm site"
+
 git add -A
 git commit -m "update"
 git push
