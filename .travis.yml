@@ -1,4 +1,5 @@
 script:
+- sudo apt-get install graphicsmagick
 - chmod +x bin/build.sh
 - ./bin/build.sh
 sudo: required

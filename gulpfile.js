@@ -12,7 +12,7 @@ const $ = plugins();
 const isProd = process.env.NODE_ENV === 'production';
 
 gulp.task('assemble', gulp.series(clean, pages, images, fonts, sass, icons, javascript));
-gulp.task('build', gulp.series('assemble', revisionFiles, sitemap));
+gulp.task('build', gulp.series('assemble', revisionFiles, sitemap, resizeProducts));
 gulp.task('default', gulp.series('assemble', server, watch));
 
 // Delete the "dist" folder
@@ -47,6 +47,15 @@ function pages () {
 function images () {
     return gulp.src('src/assets/img/**/*')
         .pipe(gulp.dest('./dist/img'));
+}
+
+function resizeProducts () {
+    return gulp.src('cdn/img/products/**/*')
+        .pipe(imageResize({
+          height: 230,
+          interlace: true
+        }))
+        .pipe(gulp.dest('cdn/img/products/'));
 }
 
 function fonts () {
