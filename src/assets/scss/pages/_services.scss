@@ -3,7 +3,7 @@
 
     background-size: cover;
     background-position: center;
-    background: linear-gradient(180deg,$color 0,$color 100%), url('/img/header-background.png');
+    background: linear-gradient(180deg,$color 0,$color 100%), url('/img/header-background.jpg');
     color: #fff;
 
     padding: 50px 0px;
@@ -11,7 +11,7 @@
 
 .services-gray-bg {
     $color: rgba(32, 30, 35, 0.85);
-    background: linear-gradient(180deg,$color 0,$color 100%), url('/img/header-background.png');
+    background: linear-gradient(180deg,$color 0,$color 100%), url('/img/header-background.jpg');
 }
 
 .services-engineering {
