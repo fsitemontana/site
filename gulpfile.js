@@ -5,6 +5,7 @@ const del = require('del');
 const browser = require('browser-sync');
 const dotenv = require('dotenv');
 const gulpSitemap = require('gulp-sitemap');
+const imageResize = require('gulp-image-resize');
 
 dotenv.config({ silent: true });
 
