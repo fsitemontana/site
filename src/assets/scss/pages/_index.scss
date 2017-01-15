@@ -40,6 +40,12 @@
     h2 {
         margin: 68px 0;
     }
+
+    @media only screen and (min-width : 768px) {
+        h2 span {
+            display: block;
+        }
+    }
 }
 
 .homepage-about-us, .homepage-activity {
