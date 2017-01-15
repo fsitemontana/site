@@ -4,6 +4,7 @@ const plugins = require('gulp-load-plugins');
 const del = require('del');
 const browser = require('browser-sync');
 const dotenv = require('dotenv');
+const gulpSitemap = require('gulp-sitemap');
 
 dotenv.config({ silent: true });
 
@@ -11,13 +12,23 @@ const $ = plugins();
 const isProd = process.env.NODE_ENV === 'production';
 
 gulp.task('assemble', gulp.series(clean, pages, images, fonts, sass, icons, javascript));
-gulp.task('build', gulp.series('assemble', revisionFiles));
+gulp.task('build', gulp.series('assemble', revisionFiles, sitemap));
 gulp.task('default', gulp.series('assemble', server, watch));
 
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean () {
     return del(['dist/**/*']);
+}
+
+function sitemap () {
+    return gulp.src('cdn/**/*.html', {
+        read: false
+    })
+    .pipe(gulpSitemap({
+        siteUrl: 'https://inkomm.org'
+    }))
+    .pipe(gulp.dest('./cdn'));
 }
 
 function pages () {
