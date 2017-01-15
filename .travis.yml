@@ -6,7 +6,3 @@ sudo: required
 language: node_js
 node_js:
 - 6.9.1
-cache:
-  pip: true
-  directories:
-  - node_modules
